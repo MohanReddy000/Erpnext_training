@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-09-13 17:17:58.684039",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "name1",
+  "agedob",
+  "customer",
+  "column_break_3",
+  "phno",
+  "addres",
+  "section_break_6",
+  "location",
+  "join_date",
+  "image",
+  "time_need",
+  "password",
+  "barcode_scane",
+  "section_break_14",
+  "submit",
+  "website",
+  "rate_",
+  "signature",
+  "amended_from",
+  "training",
+  "attach_image"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "naming series",
+   "options": "DE.####\nDA.#####"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "agedob",
+   "fieldtype": "Date",
+   "label": "Age(DOB)"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phno",
+   "fieldtype": "Int",
+   "label": "Phno"
+  },
+  {
+   "fieldname": "addres",
+   "fieldtype": "Long Text",
+   "label": "Addres"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Geolocation",
+   "label": "Location"
+  },
+  {
+   "fieldname": "join_date",
+   "fieldtype": "Date",
+   "label": "Join date"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "image"
+  },
+  {
+   "fieldname": "time_need",
+   "fieldtype": "Duration",
+   "label": "Time need"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password"
+  },
+  {
+   "fieldname": "barcode_scane",
+   "fieldtype": "Barcode",
+   "label": "Barcode scane"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "submit",
+   "fieldtype": "Button",
+   "label": "submit"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "website"
+  },
+  {
+   "fieldname": "rate_",
+   "fieldtype": "Percent",
+   "label": "Rate %"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Details",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "training",
+   "fieldtype": "Table",
+   "label": "Training",
+   "options": "Training"
+  },
+  {
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "label": "attach Image"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-09-27 15:21:03.806689",
+ "modified_by": "Administrator",
+ "module": "test",
+ "name": "Details",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "name1",
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

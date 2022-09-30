@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:itemname",
+ "creation": "2022-09-14 16:54:25.752759",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "itemname",
+  "place_of_manufacture",
+  "cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Item code"
+  },
+  {
+   "fieldname": "itemname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item name",
+   "unique": 1
+  },
+  {
+   "fieldname": "place_of_manufacture",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "place of manufacture"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "cost"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-09-14 16:54:25.752759",
+ "modified_by": "Administrator",
+ "module": "test",
+ "name": "childitem",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

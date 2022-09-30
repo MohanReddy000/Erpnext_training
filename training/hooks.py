@@ -1,3 +1,4 @@
+from xml.dom.minidom import Document
 from . import __version__ as app_version
 
 app_name = "training"
@@ -8,7 +9,33 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "mr"
 app_license = "MIT"
+fixtures=[
+{
+"dt": "Custom Field",
+        "filters": [
+         [
+             "name", "in", [
+		        "Sales Order-category"
+                "Sales Order-sales_type"
+                "Purchase Order-itemtype"
+                "Sales Invoice-email"
+		        "Sales Order-sample_order"
 
+]
+]
+]
+},
+{
+"dt": "Property Setter",
+        "filters": [
+         [
+             "name", "in", [
+		"Make"
+]
+]
+]
+},
+]
 # Includes in <head>
 # ------------------
 
@@ -32,6 +59,9 @@ app_license = "MIT"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+	"Sales Order" : "test/doctype/sales_order/sales_order.js"
+	}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -94,6 +124,26 @@ app_license = "MIT"
 # Document Events
 # ---------------
 # Hook on document methods and events
+doc_events = {
+	"Sales Order":{
+		#"before_update_after_submit" : "training.test.doctype.salesorder.salesorder.before_update_after_submit",
+		#"on_submit" : "training.test.doctype.salesorder.auto_sales_invoice.on_submit"
+	},
+	"Purchase Order":{
+		"on_submit" : "training.test.doctype.purchase_order.purchase_order.on_submit",
+		#"on_submit" :"training.test.doctype.purchase_order.auto_purchase_invoice.on_submit"
+	},
+	"Purchase Receipt": {
+		#"on_submit": "training.test.doctype.purchase_order.send_mail.on_submit"
+		"on_submit" :"training.test.doctype.salesorder.databaseapi.on_submit"
+	}
+}
+#doc_events = {
+#	"Purchase Order":{
+#		"on_submit" : "training.test.doctype.purchase_order.purchase_order.on_submit",
+#		"on_submit" :"training.test.doctype.purchase_order.auto_purchase_invoice.on_submit"
+#	}
+#}
 
 # doc_events = {
 #	"*": {
